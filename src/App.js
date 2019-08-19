@@ -1,5 +1,5 @@
 import React, { Component } from 'react'
-import './App.css';
+import './App.scss';
 import Additem from './components/Additem/Additem'
 import Todoitem from './components/Todoitem/Todoitem'
 
@@ -13,9 +13,6 @@ export default class App extends Component {
       {id: 3, name:'ccc', age:33}
     ]
   };
-
-
-
   deleteItem = (id ) => {
     const it = this.state.items.filter(item =>{
       return item.id !== id
@@ -28,16 +25,15 @@ export default class App extends Component {
 
   addItem = (item) =>{
     item.id=Math.random();
-const items = this.state.items;
-items.push(item);
-
-this.setState({items})
-// console.log(`${items.id} Is Added`)
+const it= this.state.items;
+it.push(item);
+this.setState({items:it})
+console.log(`${item.name} Is Added`)
   }
-
+  
   render() {
     return (
-      <div>
+      <div className="flex">
   <h1>React ToDo App</h1>
         
         <Todoitem items={this.state.items} deleteItem={this.deleteItem}/>
