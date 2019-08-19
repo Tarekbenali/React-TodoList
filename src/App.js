@@ -21,18 +21,27 @@ export default class App extends Component {
       return item.id !== id
       
     })
-    this.setState({
-      items:it
-    })
+    this.setState({items:it})
     console.log( ` Id : ${id} is deleted `)
 
   }
+
+  addItem = (item) =>{
+    item.id=Math.random();
+const items = this.state.items;
+items.push(item);
+
+this.setState({items})
+// console.log(`${items.id} Is Added`)
+  }
+
   render() {
     return (
       <div>
   <h1>React ToDo App</h1>
-        <Additem  />
+        
         <Todoitem items={this.state.items} deleteItem={this.deleteItem}/>
+        <Additem addItem={this.addItem} />
 
       </div>
     )
