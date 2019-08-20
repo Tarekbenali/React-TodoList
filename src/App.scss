@@ -1,18 +1,77 @@
-body{
+@import "variables";
+
+
+*{
+    box-sizing: border-box;
+  }
   
-  background: radial-gradient(ellipse at center, #C73924, #D84D6E);
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
+  body{
+    margin: 0;
+    padding: 0;
+    color: $color;
+    background-image: $background;
+    
+  }
+  
+  .container{
+    margin: 10% auto;
+    width: 60%;
+  }
+  
+  .text-center{
+    text-align: center;
+  }
+
+  .listitems{
+    background: $color;
+    color:$color-list;
 }
 
-.flex {
+    .listitems p{
+        margin:0;
+        text-align: center;
+        padding: 10px 0px;
+    }
+   .listitems span{
+        display: inline-block;
+        text-align: center;
+        padding: 10px 0px;
+        font-size: 20px;
+        border: 0.3px solid $color-input ;
+    }
+
+    .listitems span.title{
+         color: $color;
+         background:$color-item;
+    }
+    .listitems span.name,form input[type=text]{
+       width: 50%;
+    }
+    .listitems span.age,form input[type=number]{
+        width: 35%;
+     }
+
+     .listitems span.action,form input[type=submit]{
+        width: 15%;
+     }
+
+     .listitems span.icon{
+        color: red;
+        cursor:pointer;
+        font-weight: bold;
+   }
+ form input {
+     padding: 10px;
+     background: #ebebeb;
+     border: transparent;
+     border: 0.3px solid $color-input;
+ }
+
  
-  height: 100%;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
+
+.sub {
+    background: $color-item;
+    color:$color;
+    cursor: pointer;
+    border: 0.3px solid $color-item;
 }

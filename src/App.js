@@ -33,8 +33,8 @@ console.log(`${item.name} Is Added`)
   
   render() {
     return (
-      <div className="flex">
-  <h1>React ToDo App</h1>
+      <div className="container app">
+  <h1 className="text-center">React ToDo App</h1>
         
         <Todoitem items={this.state.items} deleteItem={this.deleteItem}/>
         <Additem addItem={this.addItem} />

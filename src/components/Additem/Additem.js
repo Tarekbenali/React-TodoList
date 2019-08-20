@@ -18,23 +18,29 @@ handleChange = (e) => {
 
 handleSubmit = (e)  => {
     e.preventDefault();
-    this.props.addItem(this.state);
-    this.setState({
-        name:'',
-        age:''
-    })
+
+    if(e.target.name.value === ''){
+        return false
+    }else{
+        this.props.addItem(this.state);
+        this.setState({
+            name:'',
+            age:''
+        })
+    }
+    
+// return false  ? e.target.name.value === '' 
+// // eslint-disable-next-line no-unreachable
+// : this.props.addItem(this.state); this.setState({name:'', age:''});
+   
 }
-
-
     render() {
         return (
             <div>
-                <h2 className='style2'>Style Test</h2>
                 <form onSubmit={this.handleSubmit}>
-  <input type="text" placeholder="firstname" id="name" onChange={this.handleChange} value={this.state.name}/>
-  <input type="number" placeholder="Age" id="age" onChange={this.handleChange} value={this.state.age}/>
-  <input type="submit" value="Add"/>
-</form>
+  <input type="text" placeholder="Your Name ..." id="name" onChange={this.handleChange} value={this.state.name}/>
+  <input type="number" placeholder="Your Age ..." id="age" onChange={this.handleChange} value={this.state.age}/>
+  <input type="submit" className="sub" value="Add"/></form>
                 
 </div>
         )
