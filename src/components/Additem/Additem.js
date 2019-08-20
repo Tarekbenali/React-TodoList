@@ -19,8 +19,12 @@ handleChange = (e) => {
 handleSubmit = (e)  => {
     e.preventDefault();
 
-    if(e.target.name.value === ''){
-        return false
+    if(e.target.name.value === '' || e.target.age.value === ''){
+        return (
+        this.setState({
+            name:'',
+            age:''
+        }))
     }else{
         this.props.addItem(this.state);
         this.setState({

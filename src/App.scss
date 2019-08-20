@@ -25,25 +25,31 @@
   .listitems{
     background: $color;
     color:$color-list;
-}
-
-    .listitems p{
+    p{
         margin:0;
         text-align: center;
         padding: 10px 0px;
     }
-   .listitems span{
+    span{
         display: inline-block;
         text-align: center;
         padding: 10px 0px;
         font-size: 20px;
         border: 0.3px solid $color-input ;
+        
     }
+}
+.title{
+    color: $color;
+    background:$color-item;
+}
+.icon{
+color: red;
+cursor:pointer;
+font-weight: bold;
+}
 
-    .listitems span.title{
-         color: $color;
-         background:$color-item;
-    }
+
     .listitems span.name,form input[type=text]{
        width: 50%;
     }
@@ -55,11 +61,6 @@
         width: 15%;
      }
 
-     .listitems span.icon{
-        color: red;
-        cursor:pointer;
-        font-weight: bold;
-   }
  form input {
      padding: 10px;
      background: #ebebeb;
