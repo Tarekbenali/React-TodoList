@@ -1,5 +1,5 @@
 import React from "react";
-import "./Todoitem.scss";
+// import "./Todoitem.scss";
 
 // Stateless Components
 const Todoitem = (props) => {

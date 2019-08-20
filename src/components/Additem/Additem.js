@@ -1,5 +1,5 @@
 import React, { Component } from 'react'
-import './Additem.scss'
+// import './Additem.scss'
 
 // Class Based Components
 export default class Additem extends Component {
