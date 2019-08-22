@@ -1,5 +1,6 @@
 # React ToDo App
 
+Simple TODO-List with React 
 
 ## Overview
 
