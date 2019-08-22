@@ -3,7 +3,7 @@
 
 ## Overview
 
-![Recordit GIF](https://recordit.co/yLBkhzzCCW)
+![Recordit GIF](http://g.recordit.co/yLBkhzzCCW.gif)
 
 ## Contact
 [LinkedIn](https://www.linkedin.com/in/tarekbenali90/)
